@@ -1,0 +1,263 @@
+body {
+    font-family: 'Lenster', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.product-image-section {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.annotations {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.annotation {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    padding-left: 30px;
+}
+
+.product-details {
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.price {
+    font-size: 24px;
+    color: #ff0000;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-left: 10px;
+}
+
+.discount {
+    color: #ff0000;
+    margin-left: 10px;
+}
+
+.colors, .sizes, .quantity {
+    margin-top: 20px;
+}
+
+.color-option {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.sizes label {
+    margin-right: 10px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+.add-to-cart {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(22, 98, 98);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.cart-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .product-container {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-container {
+        gap: 40px;
+    }
+
+    .product-image-section {
+        flex: 1 1 400px;
+    }
+
+    .product-details {
+        flex: 1 1 400px;
+    }
+}
+
+/* Existing CSS */
+
+.color-option {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Selected state */
+.color-option.selected {
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.description{
+    font-style: inherit;
+}
+
+.product-image-main{
+
+    border: #ff0000;
+    border-radius: 5px;
+
+}
+
+/* Existing CSS */
+
+/* Thumbnail hover and active states */
+.thumbnail {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail.active {
+    border-color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Color option hover and active states */
+.color-option {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-option.selected {
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Cart Styles */
+.cart-container {
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.cart-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+#cartItems li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
